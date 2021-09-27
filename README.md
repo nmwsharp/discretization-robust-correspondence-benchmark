@@ -6,7 +6,7 @@ This benchmark contains test meshes of human bodies, derived from the [MPI-FAUST
 
 ![example image of data](https://github.com/nmwsharp/discretization-robust-segmentation-benchmark/blob/main/data_image.png?raw=true)
 
-From: **DiffusionNet: Discretization Agnostic Learning on Surfaces**, *Nicholas Sharp, Souhaib Attaiki, Keenan Crane, Maks Ovsjanikov*, conditionally accepted to ACM ToG 2021.
+From: [**DiffusionNet: Discretization Agnostic Learning on Surfaces**](https://arxiv.org/abs/2012.00888), *Nicholas Sharp, Souhaib Attaiki, Keenan Crane, Maks Ovsjanikov*, conditionally accepted to ACM ToG 2021.
 
 Please cite this benchmark as:
 ```bib
