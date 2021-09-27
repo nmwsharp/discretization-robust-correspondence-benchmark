@@ -1,10 +1,10 @@
-# Discretization Robust Segmentation Benchmark
+# Discretization Robust Correspondence Benchmark
 
 One challenge of machine learning on 3D surfaces is that there are many different representations/samplings ("discretizations") which all encode the same underlying shape---consider e.g. different triangle meshes of a surface. We expect models to generalize across these representations; the purpose of this benchmark is to measure generalization of 3D machine learning models across different discretizations
 
 This benchmark contains test meshes of human bodies, derived from the [MPI-FAUST](http://faust.is.tue.mpg.de/) dataset, remeshed/resampled according to several policies. The task is to predict correspondence, defined by predicting the nearest vertex index on the template mesh. We intentionally provide *test data only*. The intent of this benchmark is that methods train on the ordinary FAUST template meshes, then evaluate on this dataset. This measures the ability of the method to generalize to new, unseen discretizations of shapes.
 
-![example image of data](https://github.com/nmwsharp/discretization-robust-segmentation-benchmark/blob/main/data_image.png?raw=true)
+![example image of data](https://github.com/nmwsharp/discretization-robust-correspondence-benchmark/blob/main/data_image.png?raw=true)
 
 From: [**DiffusionNet: Discretization Agnostic Learning on Surfaces**](https://arxiv.org/abs/2012.00888), *Nicholas Sharp, Souhaib Attaiki, Keenan Crane, Maks Ovsjanikov*, conditionally accepted to ACM ToG 2021.
 
