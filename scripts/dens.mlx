@@ -1,0 +1,43 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Select None">
+  <Param value="true" tooltip="If true the filter will de-select all the faces." isxmlparam="0" description="De-select all Faces" type="RichBool" name="allFaces"/>
+  <Param value="true" tooltip="If true the filter will de-select all the vertices." isxmlparam="0" description="De-select all Vertices" type="RichBool" name="allVerts"/>
+ </filter>
+ <filter name="Select None">
+  <Param value="true" tooltip="If true the filter will de-select all the faces." isxmlparam="0" description="De-select all Faces" type="RichBool" name="allFaces"/>
+  <Param value="true" tooltip="If true the filter will de-select all the vertices." isxmlparam="0" description="De-select all Vertices" type="RichBool" name="allVerts"/>
+ </filter>
+ <filter name="Conditional Face Selection">
+  <Param value="(fi == {0} || fi == {1} || fi == {2} || fi == {3} || fi == {4})" tooltip="type a boolean function that will be evaluated in order to select a subset of faces&lt;br>" isxmlparam="0" description="boolean function" type="RichString" name="condSelect"/>
+ </filter>
+ <filter name="Dilate Selection"/>
+ <filter name="Dilate Selection"/>
+ <filter name="Dilate Selection"/>
+ <filter name="Dilate Selection"/>
+ <filter name="Dilate Selection"/>
+ <filter name="Dilate Selection"/>
+ <filter name="Subdivision Surfaces: Midpoint">
+  <Param value="2" tooltip="Number of time the model is subdivided." isxmlparam="0" description="Iterations" type="RichInt" name="Iterations"/>
+  <Param value="0" min="0" tooltip="All the edges &lt;b>longer&lt;/b> than this threshold will be refined.&lt;br>Setting this value to zero will force an uniform refinement." isxmlparam="0" description="Edge Threshold" type="RichAbsPerc" name="Threshold" max="1.86416"/>
+  <Param value="true" tooltip="If selected the filter affect only the selected faces" isxmlparam="0" description="Affect only selected faces" type="RichBool" name="Selected"/>
+ </filter>
+ <filter name="Select None">
+  <Param value="true" tooltip="If true the filter will de-select all the faces." isxmlparam="0" description="De-select all Faces" type="RichBool" name="allFaces"/>
+  <Param value="true" tooltip="If true the filter will de-select all the vertices." isxmlparam="0" description="De-select all Vertices" type="RichBool" name="allVerts"/>
+ </filter>
+ <filter name="Remeshing: Isotropic Explicit Remeshing">
+  <Param value="10" tooltip="Number of iterations of the remeshing operations to repeat on the mesh." isxmlparam="0" description="Iterations" type="RichInt" name="Iterations"/>
+  <Param value="true" tooltip="Toggles adaptive isotropic remeshing." isxmlparam="0" description="Adaptive remeshing" type="RichBool" name="Adaptive"/>
+  <Param value="false" tooltip="If checked the remeshing operations will be applied only to the selected faces." isxmlparam="0" description="Remesh only selected faces" type="RichBool" name="SelectedOnly"/>
+  <Param value="0.018642" min="0" tooltip="Sets the target length for the remeshed mesh edges." isxmlparam="0" description="Target Length" type="RichAbsPerc" name="TargetLen" max="1.86416"/>
+  <Param value="30" tooltip="Minimum angle between faces of the original to consider the shared edge as a feature to be preserved." isxmlparam="0" description="Crease Angle" type="RichFloat" name="FeatureDeg"/>
+  <Param value="true" tooltip="If toggled each local operation must deviate from original mesh by [Max. surface distance]" isxmlparam="0" description="Check Surface Distance" type="RichBool" name="CheckSurfDist"/>
+  <Param value="0.018642" min="0" tooltip="Maximal surface deviation allowed for each local operation" isxmlparam="0" description="Max. Surface Distance" type="RichAbsPerc" name="MaxSurfDist" max="1.86416"/>
+  <Param value="true" tooltip="If checked the remeshing operations will include a refine step." isxmlparam="0" description="Refine Step" type="RichBool" name="SplitFlag"/>
+  <Param value="true" tooltip="If checked the remeshing operations will include a collapse step." isxmlparam="0" description="Collapse Step" type="RichBool" name="CollapseFlag"/>
+  <Param value="true" tooltip="If checked the remeshing operations will include a edge-swap step, aimed at improving the vertex valence of the resulting mesh." isxmlparam="0" description="Edge-Swap Step" type="RichBool" name="SwapFlag"/>
+  <Param value="true" tooltip="If checked the remeshing operations will include a smoothing step, aimed at relaxing the vertex positions in a Laplacian sense." isxmlparam="0" description="Smooth Step" type="RichBool" name="SmoothFlag"/>
+  <Param value="true" tooltip="If checked the remeshing operations will include a step to reproject the mesh vertices on the original surface." isxmlparam="0" description="Reproject Step" type="RichBool" name="ReprojectFlag"/>
+ </filter>
+</FilterScript>

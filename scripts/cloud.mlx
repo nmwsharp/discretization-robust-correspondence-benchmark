@@ -1,0 +1,11 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Montecarlo Sampling">
+  <Param type="RichInt" name="SampleNum" description="Number of samples" value="10000" tooltip="The desired number of samples. It can be smaller or larger than the mesh size, and according to the choosed sampling strategy it will try to adapt." isxmlparam="0"/>
+  <Param type="RichBool" name="Weighted" description="Quality Weighted Sampling" value="false" tooltip="Use per vertex quality to drive the vertex sampling. The number of samples falling in each face is proportional to the face area multiplied by the average quality of the face vertices." isxmlparam="0"/>
+  <Param type="RichBool" name="PerFaceNormal" description="Per-Face Normal" value="false" tooltip="If true for each sample we take the normal of the sampled face, otherwise the normal interpolated from the vertex normals." isxmlparam="0"/>
+  <Param type="RichFloat" name="RadiusVariance" description="Radius Variance" value="1" tooltip="The radius of the disk is allowed to vary between r/var and r*var. If this parameter is 1 the sampling is the same of the Poisson Disk Sampling" isxmlparam="0"/>
+  <Param type="RichBool" name="ExactNum" description="Exact Sample Number" value="true" tooltip="If the required total number of samples is not a strict exact requirement we can exploit a different algorithmbased on the choice of the number of samples inside each triangle by a random Poisson-distributed number with mean equal to the expected number of samples times the area of the triangle over the surface of the whole mesh." isxmlparam="0"/>
+  <Param type="RichBool" name="EdgeSampling" description="Sample CreaseEdge Only" value="false" tooltip="Restrict the sampling process to the crease edges only. Useful to sample in a more accurate way the feature edges of a mechanical mesh." isxmlparam="0"/>
+ </filter>
+</FilterScript>
