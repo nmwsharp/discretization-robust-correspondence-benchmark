@@ -64,7 +64,7 @@ Please cite this benchmark as:
 
 This benchmark is designed for template correspondence via vertex index prediction. That is, for each vertex (resp., point) in a test shape, we predict the corresponding nearest vertex on a template mesh. The FAUST template mesh has 6890 vertices, so this is essentially a segmentation problem with classes from [0, 6899]. Note that although popular in past work, this categorical formulation is surely *not* the best notion of correspondence between surfaces. However, it is very simple, and exposes a tendancy to overfit to discretization, which makes it a good choice for this benchmark.
 
-The first 80 original [MPI-FAUST](http://faust.is.tue.mpg.de/) template meshes should be used as training data: i.e. `tr_reg_000.ply`-`tr_reg_080.ply`. The last 20 shapes are taken as the test set, and remeshed/resampled for the purpose of this benchmark. These original meshes are already deformations of the template, so the ground truth vertex labels are simply `[0,1,2,3,4...]`. 
+The first 80 original [MPI-FAUST](http://faust.is.tue.mpg.de/) template meshes should be used as training data: i.e. `tr_reg_000.ply`-`tr_reg_080.ply`. The last 20 shapes are taken as the test set, and remeshed/resampled for the purpose of this benchmark. These original meshes are already deformations of the template, so the ground truth vertex labels are simply `[0,1,2,3,4...]`. We do not host the original data here; you must download it from http://faust.is.tue.mpg.de/.
 
 After training on the first 80 original FAUST meshes, we evaluate on the test meshes, predicting corresponding vertices. Error is measured by the geodesic distance along the template mesh between the predicted vertex and the ground-truth vertex. (% of vertices predicted exactly correct is *not* really a meaningful metric.) See [this repo](https://github.com/nmwsharp/diffusion-net/tree/master/experiments) for a full example of training and eval scripts.
 
@@ -76,4 +76,4 @@ After training on the first 80 original FAUST meshes, we evaluate on the test me
 
 The scripts which generate the data are available for any use under an MIT license (C) Nicholas Sharp 2021.
 
-The remeshed/sampled meshes are derived from the [MPI-FAUST](http://faust.is.tue.mpg.de/) dataset, governed by [this license](http://faust.is.tue.mpg.de/data_license) (which allows derivative works).
+The remeshed/sampled meshes are derived from the [MPI-FAUST](http://faust.is.tue.mpg.de/) dataset, governed by [this license](http://faust.is.tue.mpg.de/data_license) (which allows derivative works). 
